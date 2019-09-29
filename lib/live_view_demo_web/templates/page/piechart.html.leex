@@ -1,0 +1,30 @@
+<h3>Pie Chart Maker</h3>
+<div style="font-weight: bold; float: left;">
+    <form phx-change="piechart" phx-submit="ignore">
+        <p style="font-weight:bold">Edit the input:</p>
+        <input type="piechart" name="pie_input" value="<%= @data.pie_input %>" size="40" />
+    </form>
+</div>
+<div style="float: right">
+    <form phx-change="piechart_style">
+        <p style="font-weight:bold">Style:</p>
+        <fieldset>
+            basic <input type="radio" name="piechart_style" value="basic"
+                <%=  if "basic" == @data.piechart_style, do: "checked=checked" %> />
+            funky <input type="radio" name="piechart_style" value="funky"
+                <%=  if "funky" == @data.piechart_style, do: "checked=checked" %> />
+            pie <input type="radio" name="piechart_style" value="pie"
+                <%=  if "pie" == @data.piechart_style, do: "checked=checked" %> />
+        </fieldset>
+    </form>
+</div>
+
+<div style="min-width: 100%; float: left; background-color: #ebebeb;">
+    <%= LiveViewDemoWeb.PieChartLive.render_piechart(@data) %>
+</div>
+
+<div id="footer">
+    <div class="author">Created by <a href="https://twitter.com/miladamilli">Milada</a></div>
+    <div class="footer">See the code and more info <a href="https://github.com/miladamilli/piechart_maker">on GitHub</a>
+    </div>
+</div>
