@@ -19,6 +19,7 @@ defmodule LiveViewDemoWeb.Router do
 
     get "/", PageController, :index
     live "/clock", ClockLive
+    live "/piechart", PieChartLive
   end
 
   # Other scopes may use custom stacks.
