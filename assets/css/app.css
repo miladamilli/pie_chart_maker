@@ -2,3 +2,273 @@
 
 @import "./phoenix.css";
 @import "../../deps/phoenix_live_view/assets/css/live_view.css";
+h3 {
+    color: #9e61db;
+}
+
+p {
+    margin-bottom: 0rem;
+}
+
+#footer {
+    color: dimgray;
+}
+
+.footer {
+    float: right;
+    text-align: right;
+}
+
+.author {
+    float: left;
+}
+
+input {
+    padding: 0 0.5em;
+}
+
+/* Style for SVG Pie Chart */
+
+.pieslice {
+    stroke: white;
+    stroke-width: 0.6;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+
+.pieslice_pie {
+    stroke: #d07e3e;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+
+/* Style for slices: Basic colours */
+
+.color1 {
+    fill: hsl(0, 100%, 70%)
+}
+
+.color2 {
+    fill: hsl(30, 100%, 70%)
+}
+
+.color3 {
+    fill: hsl(60, 100%, 70%)
+}
+
+.color4 {
+    fill: hsl(90, 100%, 70%)
+}
+
+.color5 {
+    fill: hsl(120, 100%, 70%)
+}
+
+.color6 {
+    fill: hsl(150, 100%, 70%)
+}
+
+.color7 {
+    fill: hsl(180, 100%, 70%)
+}
+
+.color8 {
+    fill: hsl(210, 100%, 70%)
+}
+
+.color9 {
+    fill: hsl(240, 100%, 70%)
+}
+
+.color10 {
+    fill: hsl(270, 100%, 70%)
+}
+
+.color11 {
+    fill: hsl(300, 100%, 70%)
+}
+
+.color12 {
+    fill: hsl(330, 100%, 70%)
+}
+
+.color13 {
+    fill: hsl(0, 60%, 50%)
+}
+
+.color14 {
+    fill: hsl(30, 60%, 50%)
+}
+
+.color15 {
+    fill: hsl(60, 60%, 50%)
+}
+
+.color16 {
+    fill: hsl(90, 60%, 50%)
+}
+
+.color17 {
+    fill: hsl(120, 60%, 50%)
+}
+
+.color18 {
+    fill: hsl(150, 60%, 50%)
+}
+
+.color19 {
+    fill: hsl(180, 60%, 50%)
+}
+
+.color20 {
+    fill: hsl(210, 60%, 50%)
+}
+
+.color21 {
+    fill: hsl(240, 60%, 50%)
+}
+
+.color22 {
+    fill: hsl(270, 60%, 50%)
+}
+
+.color23 {
+    fill: hsl(300, 60%, 50%)
+}
+
+.color24 {
+    fill: hsl(330, 60%, 50%)
+}
+
+.color25 {
+    fill: hsl(0, 30%, 70%)
+}
+
+.color26 {
+    fill: hsl(30, 30%, 70%)
+}
+
+.color27 {
+    fill: hsl(60, 30%, 70%)
+}
+
+.color28 {
+    fill: hsl(90, 30%, 70%)
+}
+
+.color29 {
+    fill: hsl(120, 30%, 70%)
+}
+
+.color30 {
+    fill: hsl(150, 30%, 70%)
+}
+
+.color31 {
+    fill: hsl(180, 30%, 70%)
+}
+
+.color32 {
+    fill: hsl(210, 30%, 70%)
+}
+
+.color33 {
+    fill: hsl(240, 30%, 70%)
+}
+
+.color34 {
+    fill: hsl(270, 30%, 70%)
+}
+
+.color35 {
+    fill: hsl(300, 30%, 70%)
+}
+
+.color36 {
+    fill: hsl(330, 30%, 70%)
+}
+
+/* Style for slices: Funky colours */
+
+.funky1 {
+    fill: #ff334a
+}
+
+.funky2 {
+    fill: #ff4bcc
+}
+
+.funky3 {
+    fill: #c85cff
+}
+
+.funky4 {
+    fill: #757aff
+}
+
+.funky5 {
+    fill: #45d6ff
+}
+
+.funky6 {
+    fill: #10ffc0
+}
+
+.funky7 {
+    fill: #26ff40
+}
+
+.funky8 {
+    fill: #ffff26
+}
+
+.funky9 {
+    fill: #ff9300
+}
+
+.funky10 {
+    fill: #3052ff
+}
+
+.funky11 {
+    fill: #da0042
+}
+
+.funky12 {
+    fill: #4dd110
+}
+
+.funky13 {
+    fill: #ffcf00
+}
+
+/* Style for slices: Custom */
+
+.blueberry {
+    fill: url("#blueberry");
+}
+
+.strawberry {
+    fill: url("#strawberry");
+}
+
+.kiwi {
+    fill: url("#kiwi");
+}
+
+.apple {
+    fill: url("#apple");
+}
+
+.banana {
+    fill: url("#banana");
+}
+
+.chocolate {
+    fill: url("#chocolate");
+}
+
+.mint {
+    fill: url("#mint");
+}
