@@ -24,26 +24,22 @@ defmodule LiveViewDemoWeb.PieChartLive do
     xmlns:xlink="http://www.w3.org/1999/xlink">
 
     <!-- render patterns for use in CSS -->
-
     <%= LiveViewDemoWeb.PieChartLive.render_patterns(%{}) %>
 
     <!-- pie chart's main template -->
-
     <g transform="translate(350, 250) scale(<%= @scale %>) ">
 
     <!-- generate pie slices -->
-
       <%= for slice <- @piechart do %>
-        <path id="slice-<%= slice.name %>" d="<%= slice.slice_shape %>"
+        <path d="<%= slice.slice_shape %>"
         transform="rotate(<%= slice.rotation %> 0 0)"
         class="<%= slice.color %>
-        <%= if @piechart_style == "pie", do: "pieslice_pie", else: "pieslice" %>
-        <%= if @piechart_style == "pie", do: slice.name, else: "" %>" />
+        <%= if @piechart_style == "pie", do: "pieslice_pie " <> slice.name, else: "pieslice" %>
+        <%= if length(@piechart) == 1, do: "nostroke", else: "" %>" />
       <% end %>
 
-      <%= if @piechart_style == "pie" do %>
-        <circle cx="0" cy="0" r="<%= @radius %>" stroke="#d07e3e" stroke-width="10" fill="none" />
-      <% end %>
+      <circle cx="0" cy="0" r="<%= @radius %>" class="<%= if @piechart_style == "pie", do: "piecircle_pie", else: "piecircle" %>" fill="none" />
+
     </g>
     </svg>
     """
@@ -54,7 +50,6 @@ defmodule LiveViewDemoWeb.PieChartLive do
   end
 
   @items ~w(kiwi blueberry banana strawberry mint apple chocolate)
-
   def mount(_session, socket) do
     pie_input = random_input(@items)
 
@@ -130,19 +125,26 @@ defmodule LiveViewDemoWeb.PieChartLive do
   end
 
   @start_angle 0
+
   defp arc_start(radius) do
-    x = radius * :math.cos(@start_angle)
-    y = radius * :math.sin(@start_angle)
+    start_angle = deg_to_rad(@start_angle)
+    x = radius * :math.cos(start_angle)
+    y = radius * :math.sin(start_angle)
     "#{x},#{y}"
   end
 
   defp arc_end(angle, radius) do
-    x_prev = radius * :math.cos(@start_angle)
-    y_prev = radius * :math.sin(@start_angle)
-    angle = angle * (:math.pi() / 180)
+    angle = deg_to_rad(angle)
+    start_angle = deg_to_rad(@start_angle)
+    x_prev = radius * :math.cos(start_angle)
+    y_prev = radius * :math.sin(start_angle)
     x = radius * :math.cos(angle)
     y = radius * :math.sin(angle)
     "#{x - x_prev},#{y - y_prev}"
+  end
+
+  defp deg_to_rad(angle) do
+    angle * (:math.pi() / 180)
   end
 
   defp calculate_percents(piechart) do
