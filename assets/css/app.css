@@ -6,11 +6,10 @@ h3 {
     color: #9e61db;
 }
 
-p {
-    margin-bottom: 0rem;
-}
-
 #footer {
+    width: 100%;
+    float: left;
+    padding: 1rem 0;
     color: dimgray;
 }
 
@@ -41,6 +40,20 @@ input {
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round
+}
+
+.nostroke {
+    stroke: none;
+}
+
+.piecircle {
+    stroke: white;
+    stroke-width: 0.6;
+}
+
+.piecircle_pie {
+    stroke: #d07e3e;
+    stroke-width: 10;
 }
 
 /* Style for slices: Basic colours */
