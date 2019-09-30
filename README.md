@@ -4,9 +4,9 @@ This is my entry in [Phoenix Phrenzy](https://phoenixphrenzy.com), showing off w
 
 ![Pie Chart Maker preview](assets/static/images/preview.gif "Pie Chart Maker")
 
-A Pie Chart Maker with several predefined styles and an option to define custom styles for the items.
+A Pie Chart Maker with several predefined styles and an option to create custom styles for the items.
 
-The pie slices are generated as _SVG paths_.
+Pie slices are generated as _SVG paths_.
 
 ## Try it online
 **[Pie Chart Maker Demo](http://cernaovec.gigalixirapp.com/piechart)**
@@ -24,9 +24,9 @@ Edit the input and the application will automatically recalculate the percents a
 ## The Pie style :-)
 
 Item's name == name of a _.css_ class.  
-So you can easily define custom styles for the items. (Edit `/assets/css/app.css` file. Add the custom classes at the end of the file, after the default ones, for this to work.)  
+So you can easily create custom styles for the items. (Edit `/assets/css/app.css` file. Add the custom classes at the end of the file, after the default ones, for this to work.)  
 
-If there is no predefined style for the item, it will have one of the basic colors.
+If there is no predefined style for the item, it will use one of the basic colors.
 
 Currently there are a few predefined styles: _strawberry, banana, blueberry, kiwi_ etc. 
 
